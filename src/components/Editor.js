@@ -19,13 +19,14 @@ const Editor = ({ value, setQuery, setValue }) => {
 
   return (
     <>
-      <div className="w-70">
+      <div className="w-70 p-2">
       <label htmlFor="board">
         <AceEditor
           style={{
             width: "match-parent",
             height: "15rem",
           }}
+          className="rounded-lg drop-shadow-sm"
           mode="mysql"
           id="board"
           placeholder="Write your query here"
@@ -54,7 +55,7 @@ const Editor = ({ value, setQuery, setValue }) => {
       <div className="h-10 m-3">
         <button
           className={
-            "w-full h-full bg-purple hover:bg-purple hover:animate-pulse transition-colors text-white rounded-md font text-md font-semimbold drop-shadow-lg"
+            "w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:animate-pulse transition-colors text-white rounded-md font text-md font-semimbold drop-shadow-sm"
           }
           onClick={handleClick}
         >

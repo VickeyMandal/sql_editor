@@ -24,11 +24,11 @@ const Navbar = ({ setQuery, setValue, setTableTitle, isOpen, setIsOpen }) => {
       <div
         className=
         {`${
-          isOpen ? "col-span-2 absolute " : "hidden"
-        } bg-purple h-full z-30 absolute`}
+          isOpen ? "col-span-2 absolute  " : "hidden"
+        } bg-white h-full z-30 absolute `}
         // className="transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
       >
-        <div className="bg-gray-800 h-14 p-5 flex flex-row items-center text-white font-semibold uppercase">
+        <div className="bg-myblack h-14 p-5 flex flex-row items-center text-white font-semibold uppercase">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 mr-2"
@@ -70,7 +70,7 @@ const Navbar = ({ setQuery, setValue, setTableTitle, isOpen, setIsOpen }) => {
           {Menus.map((Menu, index) => (
             <li
               key={index}
-              className="flex rounded-md p-2 cursor-pointer hover:bg-gray-100 hover:text-gray-700 text-gray-300 text-sm items-center gap-x-4"
+              className="flex rounded-md p-2 cursor-pointer hover:bg-gray-100 hover:text-gray-700 text-gray-700 text-sm items-center gap-x-4"
               onClick={() => {
                 handleQuery(Menu.file, Menu.title);
                 //setIsOpen(!isOpen);

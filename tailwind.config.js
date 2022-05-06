@@ -6,23 +6,9 @@ module.exports = {
     extend: {
 
       colors:{
-        "billOrange" : "#DB631A",
-        "buttonColor" : "#FF0000",
-        "cream" :"#FBF7F4",
-        "silver" : "#485EB0",
-        "fadesilver" : "#edeff7",
-        "diamond" : "#DB631A",
-        "fadediamond":"#fbefe8",
-        "gold":"#dba249",
-        "fadegold" : "#f8e9d3",
-        "fadegold2" : "#fbf6ed",
-        "mostpopular":"#ed513f",
-        "whatsapp" : "#269687",
-        "whatsappfade":"#E7F4F2",
-        "chatfade": "#e9f1ff",
-        "chat" : "#7bacff",
-        "purple" : "#4c3cce",
-        "darkpurple":"#2f27c9"
+        "lightpurple" : "#8c66e6",
+        "darkpurple":"#6457cd",
+        "myblack":"#262626"
       },
       screens: {
         sm: { max: '767px' }, // Mobile (matches max: iPhone 11 Pro Max landscape @ 896px).

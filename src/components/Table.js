@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import {
   useTable,
   useSortBy,
@@ -60,30 +60,32 @@ const Table = ({ columns, runtime, data, allData }) => {
       <div className="flex flex-row w-full items-center my-3">
         <Search filter={globalFilter} setFilter={setGlobalFilter} />
         <span className="flex w-full justify-end">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 mr-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          <p>{`${runtime.toFixed(2)} ms`}</p>
+          <div className="w-max bg-sky-400 flex flex-row rounded-md px-2 text-white py-1 text-sm drop-shadow-sm">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 mr-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <p>{`${runtime.toFixed(2)} ms`}</p>
+          </div>
         </span>
       </div>
 
-      <div className="relative overflow-x-auto  text-xs rounded-sm shadow-sm">
+      <div className="relative overflow-x-auto  text-xs rounded-lg drop-shadow-sm bg-white">
         <table
           {...getTableProps}
           className="min-w-full divide-y divide-gray-200 table-auto"
         >
-          <thead className="h-10 w-full bg-gray-100 text-gray-500 grid items-center ">
+          <thead className="h-10 w-full bg-gray-200 text-gray-500 grid items-center ">
             {headerGroups.map((headerGroup) => (
               <tr
                 {...headerGroup.getHeaderGroupProps()}
