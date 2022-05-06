@@ -24,8 +24,8 @@ const Navbar = ({ setQuery, setValue, setTableTitle, isOpen, setIsOpen }) => {
       <div
         className=
         {`${
-          isOpen ? "w-72 absolute transform translate-x-[0px]" : ""
-        } bg-purple h-full z-20 transform -translate-x-full absolute`}
+          isOpen ? "w-72 absolute transform translate-x-0" : "hidden"
+        } bg-purple h-full z-30 transform -translate-x-full absolute`}
         // className="transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
       >
         <div className="bg-gray-800 h-14 p-5 flex flex-row items-center text-white font-semibold uppercase">
@@ -66,7 +66,7 @@ const Navbar = ({ setQuery, setValue, setTableTitle, isOpen, setIsOpen }) => {
           </button>
         </div>
 
-        <ul className="pt-2 space-y-3 p-5">
+        <ul className="pt-2 space-y-1 p-5">
           {Menus.map((Menu, index) => (
             <li
               key={index}
