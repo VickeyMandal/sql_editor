@@ -20,15 +20,18 @@ const Editor = ({ value, setQuery, setValue }) => {
   return (
     <>
       <div className="w-70">
+      <label htmlFor="board">
         <AceEditor
           style={{
             width: "match-parent",
             height: "15rem",
           }}
           mode="mysql"
-          placeholder="Write query here"
+          id="board"
+          placeholder="Write your query here"
           theme="tomorrow"
-          name="query_board"
+          aria-label="editor"
+          name="board"
           editorProps={{ $blockScrolling: true }}
           fontSize={16}
           showPrintMargin={true}
@@ -43,6 +46,7 @@ const Editor = ({ value, setQuery, setValue }) => {
             tabSize: 2,
           }}
         />
+        </label>
       </div>
 
 

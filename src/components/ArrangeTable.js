@@ -1,12 +1,11 @@
 import React, { useMemo } from "react";
-import Table from "./Table";
-import Data from "../DataHook/Data";
-import { tableImage } from "../resources/table.svg";
+//import Table from "./Table";
+const Table = React.lazy(() => import("./Table"));
 
 const ArrangeTable = ({ query, runtime, isOpen, data }) => {
-  //console.log(allData)
 
-  console.log(data);
+
+  //console.log(data);
   const columns = useMemo(() => {
     if (data.length > 0) {
       return Object.keys(data[0]).map((key) => {
@@ -64,19 +63,19 @@ const ArrangeTable = ({ query, runtime, isOpen, data }) => {
                   <div className="h-2 bg-slate-200 rounded"></div>
                   <div className="space-y-6">
                     <div className="grid grid-cols-3 gap-4">
-                      <div class="h-2 bg-slate-200 rounded col-span-1"></div>
-                      <div class="h-2 bg-slate-200 rounded col-span-1"></div>
-                      <div class="h-2 bg-slate-200 rounded col-span-1"></div>
-                      <div class="h-2 bg-slate-200 rounded col-span-1"></div>
-                      <div class="h-2 bg-slate-200 rounded col-span-1"></div>
-                      <div class="h-2 bg-slate-200 rounded col-span-1"></div>
+                      <div className="h-2 bg-slate-200 rounded col-span-1"></div>
+                      <div className="h-2 bg-slate-200 rounded col-span-1"></div>
+                      <div className="h-2 bg-slate-200 rounded col-span-1"></div>
+                      <div className="h-2 bg-slate-200 rounded col-span-1"></div>
+                      <div className="h-2 bg-slate-200 rounded col-span-1"></div>
+                      <div className="h-2 bg-slate-200 rounded col-span-1"></div>
                     </div>
                     <div className="h-2 bg-slate-200 rounded"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="text-gray-400 text-2xl sm:text-lg mt-5">Select a Database or Run Query</div>
+            <div className="text-gray-700 text-sm sm:text-lg mt-5">Select a Database or Run Query</div>
 
           </div>
         </>

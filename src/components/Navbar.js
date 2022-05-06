@@ -22,8 +22,9 @@ const Navbar = ({ setQuery, setValue, setTableTitle, isOpen, setIsOpen }) => {
   return (
     <>
       <div
-        className={`${
-          isOpen ? "w-72 absolute inset-0 transform translate-x-0 " : ""
+        className=
+        {`${
+          isOpen ? "w-72 absolute transform translate-x-[0px]" : ""
         } bg-purple h-full z-20 transform -translate-x-full absolute`}
         // className="transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
       >
@@ -45,6 +46,7 @@ const Navbar = ({ setQuery, setValue, setTableTitle, isOpen, setIsOpen }) => {
           Collections
           <button
             className="absolute right-3"
+            aria-label="close"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg

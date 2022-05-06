@@ -8,15 +8,10 @@ import {
   useBlockLayout,
 } from "react-table";
 import Search from "./Search";
-import { COLUMNS } from "./Data/Columns";
-import MOCK_DATA from "./Data/MOCK_DATA.json";
+
 //import { Styles } from "./TableStyles";
 const Table = ({ columns, runtime, data, allData }) => {
   //? Import Data
-  //const columns = useMemo(() => COLUMNS, []);
-  //const data = useMemo(() => MOCK_DATA, []);
-
-  //const data = useMemo(() => allData.slice(1), [allData])
   //! remove styled component
   const {
     getTableProps,

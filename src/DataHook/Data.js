@@ -8,7 +8,7 @@ const Data = (tableName) => {
   const [error, setError] = useState(false);
   const [runtime, setRuntime] = useState("");
   
-    console.log(tableName)
+    //console.log(tableName)
   //?URL
   //const name = tableName
   const getURL = (name) =>
@@ -20,11 +20,11 @@ const Data = (tableName) => {
           .promise("SELECT * FROM CSV(?, {headers: false, separator:','})", [data])
           .then((data) => {
             setData(data);
-            console.log("success")
+           // console.log("success")
             //toast.success("Query run successfully");
           })
           .catch((e) => {
-              console.log("error json")
+              //console.log("error json")
             //toast.error(e.message);
           });
       };
@@ -51,12 +51,12 @@ const Data = (tableName) => {
           .then((data) => convertToJson(atob(data.content.replace("\n", ""))))
           .catch((error) => {
             //toast.error(error.message);
-            console.log(error)
+            //console.log(error)
           });
       } else {
         setError(true);
         //toast.error("Please enter a valid query");
-        console.log("error in set")
+       // console.log("error in set")
       }
     };
     let t0 = performance.now(); //start time
@@ -64,7 +64,7 @@ const Data = (tableName) => {
     let t1 = performance.now(); //end time
     setRuntime(t1 - t0);
   }, [tableName]);
-  console.log(data)
+  //console.log(data)
   return { data, runtime, error };
 };
 
