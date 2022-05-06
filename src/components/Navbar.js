@@ -24,8 +24,8 @@ const Navbar = ({ setQuery, setValue, setTableTitle, isOpen, setIsOpen }) => {
       <div
         className=
         {`${
-          isOpen ? "w-72 absolute transform translate-x-0" : "hidden"
-        } bg-purple h-full z-30 transform -translate-x-full absolute`}
+          isOpen ? "col-span-2 absolute " : "hidden"
+        } bg-purple h-full z-30 absolute`}
         // className="transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
       >
         <div className="bg-gray-800 h-14 p-5 flex flex-row items-center text-white font-semibold uppercase">
