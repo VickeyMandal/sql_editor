@@ -4,7 +4,6 @@
 
 ![scr](https://user-images.githubusercontent.com/63285005/167256497-52e2285c-a8ce-43dc-aa27-d115a552ac51.jpg)
 
-
 ## 🌏 Demo
 
 <a href="https://github.com/rishipurwar1/coding-space" target="blank">
@@ -28,6 +27,9 @@ Here : [SQL Editor](https://sql-editor-azure.vercel.app/)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ### ⌚ Page Load time
+
+![scr2](https://user-images.githubusercontent.com/63285005/167260605-fe1979ce-09d0-4cef-82d9-990d2d3a392b.jpg)
+
 👉 This website's page load time on desktop is between 0.2 and 0.6 seconds.\
 👉 I used these two tools to analyze the website's performance and load time: Lighthouse Chrome DevTools.
 
