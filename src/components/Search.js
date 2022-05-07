@@ -1,5 +1,5 @@
 
-const Search = ({ filter, setFilter }) => {
+const Search = ({ filter, setFilter, len }) => {
   return (
     <div className="my-1 h-9">
       <div className="h-full w-max flex flex-row rounded-md ">
@@ -20,12 +20,15 @@ const Search = ({ filter, setFilter }) => {
           </svg>
         </div>
         <input
-          className="h-full pl-3 focus:outline-none border-y-2 border-r-2 border-gray-200 w-52 rounded-r-md text-sm"
+          className="h-full pl-3 focus:outline-none border-y-2 border-r-2 border-gray-200 w-52 sm:w-24 rounded-r-md text-sm"
           type="text"
           name="search"
           value={filter || ""}
           onChange={(e) => setFilter(e.target.value)}
         />
+        <p className="flex items-center ml-5 text-gray-500">
+        {len} Records
+        </p>
       </div>
     </div>
   );

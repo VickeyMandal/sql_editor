@@ -1,5 +1,4 @@
 import AceEditor from "react-ace";
-
 import "ace-builds/src-noconflict/mode-mysql";
 import "ace-builds/src-noconflict/theme-tomorrow";
 

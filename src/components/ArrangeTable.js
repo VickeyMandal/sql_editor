@@ -2,9 +2,7 @@ import React, { useMemo } from "react";
 //import Table from "./Table";
 const Table = React.lazy(() => import("./Table"));
 
-const ArrangeTable = ({ query, runtime, isOpen, data }) => {
-
-
+const ArrangeTable = ({ query, runtime, isOpen, data, len, error }) => {
   //console.log(data);
   const columns = useMemo(() => {
     if (data.length > 0) {
@@ -21,14 +19,32 @@ const ArrangeTable = ({ query, runtime, isOpen, data }) => {
     }
   }, [data]);
 
+  //console.log(error)
+
   const queryData = useMemo(() => data.slice(1), [data]);
   //console.log(data)
+  
+  // if(error){
+  //   return(
+  //     <>
+  //     <div className="px-5 w-full h-full flex flex-col justify-center">
+  //         <div className="flex flex-col justify-center py-5 ">
+  //             😥 Something went wrong
+  //         </div>
+  //     </div>
+  //   </>
+  //   )
+  // }
+  
+  
+
   return (
     <>
       {data.length > 0 ? (
         <>
           <div className="px-5">
             <Table
+              len={len}
               columns={columns}
               runtime={runtime}
               data={queryData}
@@ -75,8 +91,9 @@ const ArrangeTable = ({ query, runtime, isOpen, data }) => {
                 </div>
               </div>
             </div>
-            <div className="text-gray-700 text-sm sm:text-lg mt-5">Select a Database or Run Query</div>
-
+            <div className="text-gray-700 text-sm sm:text-lg mt-5">
+              Select a Database or Run Query
+            </div>
           </div>
         </>
       )}

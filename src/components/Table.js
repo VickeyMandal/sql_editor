@@ -10,7 +10,7 @@ import {
 import Search from "./Search";
 
 //import { Styles } from "./TableStyles";
-const Table = ({ columns, runtime, data, allData }) => {
+const Table = ({ columns, runtime, data, allData, len }) => {
   //? Import Data
   //! remove styled component
   const {
@@ -58,7 +58,7 @@ const Table = ({ columns, runtime, data, allData }) => {
     <>
       {/* <button onClick={changeOrder}>Change Column Order</button> */}
       <div className="flex flex-row w-full items-center my-3">
-        <Search filter={globalFilter} setFilter={setGlobalFilter} />
+        <Search filter={globalFilter} setFilter={setGlobalFilter} len={len} />
         <span className="flex w-full justify-end">
           <div className="w-max bg-sky-400 flex flex-row rounded-md px-2 text-white py-1 text-sm drop-shadow-sm">
             <svg

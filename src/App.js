@@ -6,27 +6,33 @@ import "./App.css";
 import CsvDownload from "react-json-to-csv";
 //import { exportToJson } from "./helper/exportToJSON.js";
 import Data from "./DataHook/Data";
+import Loading from "./components/Loading";
 //import { AiFillGithub } from "react-icons/ai";
 
 const Editor = React.lazy(() => import("./components/Editor"));
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const ArrangeTable = React.lazy(() => import("./components/ArrangeTable"));
 const exportToJson = React.lazy(() => import("./helper/exportToJSON.js"));
+//const Loading = React.lazy(() => import("./components/Loading"))
 //const AiFillGithub = React.lazy(()=> import('react-icons/ai/AiFillGithub.svg') )
 function App() {
   const [query, setQuery] = useState("");
   const [value, setValue] = useState("select * from categories");
   const [isOpen, setIsOpen] = useState(false);
   const [tableName, setTableTitle] = useState("");
+  //const [length, setTength] = useState("")
 
   //?Data
   //const [maindata,setmainData] = useState([])
   const { data, runtime, error } = Data(query);
-
+  let len;
+  if (data.length > 0) {
+    len = data.length - 1;
+  }
   return (
     <>
       <div className="App">
-        <Suspense fallback={"loading"}>
+        <Suspense fallback={<Loading />}>
           {/* Navbar start */}
           <div>
             <Navbar
@@ -46,7 +52,7 @@ function App() {
               <span className="h-full w-full mt-10 ml-12 z-0 flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 absolute cursor-pointer
+                  className="h-8 w-8 absolute cursor-pointer
            rounded-full"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -83,29 +89,31 @@ function App() {
                 <div className="whitespace-nowrap">Sql Editor</div>
               </div>
 
-              <div className=" ml-64 sm:ml-20 w-max flex flex-row justify-end items-baseline pt-12 pb-24">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-[30rem] ml-[32rem] sm:h-64 sm:ml-[1rem]   opacity-25 -rotate-45"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"
-                  />
-                </svg>
+              <div className="ml-64 sm:ml-20 w-max flex flex-row justify-end items-baseline pt-12 pb-24">
+               
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-[30rem] ml-[32rem] sm:h-64 sm:ml-[1rem]   opacity-25 -rotate-45"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"
+                    />
+                  </svg>
+           
               </div>
 
               <div className="absolute right-5 cursor-pointer">
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  title="github"
-                  href="https://github.com/VickeyMandal"
+                  aria-label="github"
+                  href="https://github.com/VickeyMandal/sql_editor"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -135,6 +143,8 @@ function App() {
                   {tableName}
                 </div>
                 <ArrangeTable
+                  len={len}
+                  error={error}
                   query={query}
                   runtime={runtime}
                   isOpen={isOpen}
@@ -143,7 +153,7 @@ function App() {
               </div>
               {/* Table section end */}
               {/* Editor Section start*/}
-              <div className=" border-gray-400 col-span-2 flex flex-col sm:mt-1">
+              <div className=" border-gray-400 col-span-2 flex flex-col h-max sm:mt-1">
                 <div className=" left pl-5 uppercase h-12 sm:border-t-[1px] border-b-[1px] border-l-[1px] border-gray-300 flex items-center justify-center">
                   Run Query
                 </div>
@@ -231,6 +241,24 @@ function App() {
                   </button>
                 </div>
                 {/* Download Buttons csv and json end */}
+                <div className="h-24 sm:h-12 sm:mb-4 flex flex-col justify-end text-xs text-gray-600">
+                  <div className="flex flex-row justify-center">
+                    Made with{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="red"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                        clipRule="evenodd"
+                      />
+                    </svg>{" "}
+                    by Bappaditya Mandal
+                  </div>
+                </div>
               </div>
               {/* Editor section end */}
             </div>

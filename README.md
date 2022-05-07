@@ -1,11 +1,42 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# SQL Editor
 
-In the project directory, you can run:
+![scr](https://user-images.githubusercontent.com/63285005/167256497-52e2285c-a8ce-43dc-aa27-d115a552ac51.jpg)
 
+
+## 🌏 Demo
+
+<a href="https://github.com/rishipurwar1/coding-space" target="blank">
+<img src="https://img.shields.io/website?url=https://www.codingspace.codes&logo=github&style=flat-square" />
+</a>
+
+Here : [SQL Editor](https://sql-editor-azure.vercel.app/)
+
+## 🎁 Features
+👉 Users can get data from either runing query on SQL Editor or the Sidebar Menu. \
+👉 The search bar allows users to look for specific information among many records. \
+👉 By clicking the Table Header field title, users can sort data immediately. \
+👉 Pagination allows users to jump to different pages. \
+👉 The query runtime is displayed in milliseconds for users (ms). \
+👉 With only one click, users may download data in CSV and JSON formats. 
+
+
+## ⚙ Tech
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+### ⌚ Page Load time
+👉 This website's page load time on desktop is between 0.2 and 0.6 seconds.\
+👉 I used these two tools to analyze the website's performance and load time: Lighthouse Chrome DevTools.
+
+## 😎 How I Optimized the page
+
+👉 For a faster page load, i used code splitting with 'React.Lazy()' and 'Suspense' to lazy load the components and separate javaScript into numerous parts utilising Dynamic runtime Imports.\
+👉 Optimized the render performance of functional components using 'React.Memo()'.\
+👉 Used the Lighthouse DevTools Extension to identify performance issues and implement their recommendations.
+##
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -28,43 +59,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
