@@ -73,7 +73,7 @@ const Navbar = ({ setQuery, setValue, setTableTitle, isOpen, setIsOpen }) => {
               className="flex rounded-md p-2 cursor-pointer hover:bg-gray-100 hover:text-gray-700 text-gray-700 text-sm items-center gap-x-4"
               onClick={() => {
                 handleQuery(Menu.file, Menu.title);
-                //setIsOpen(!isOpen);
+                setIsOpen(!isOpen);
               }}
             >
               <svg
